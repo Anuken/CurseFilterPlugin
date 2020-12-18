@@ -1,0 +1,5 @@
+name: "CurseFilter",
+author: "Anuke",
+description: "heck",
+main: "cursefilter.CurseFilter",
+version: 1.0

@@ -14,7 +14,7 @@ public class CurseFilter extends Plugin{
     public void init(){
         netServer.admins.addChatFilter((player, text) -> {
             for(String swear : swears){
-                text = text.replaceAll("(?i)" + swear, "****");
+                text = text.replaceAll("(?iu)" + swear, "****");
             }
 
             return text;

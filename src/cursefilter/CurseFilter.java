@@ -14,6 +14,15 @@ public class CurseFilter extends Plugin{
     public void init(){
         netServer.admins.addChatFilter((player, text) -> {
             for(String swear : swears){
+                swear = swear.replaceAll("1","i");
+                swear = swear.replaceAll("!","i");
+                swear = swear.replaceAll("3","e");
+                swear = swear.replaceAll("4","a");
+                swear = swear.replaceAll("@","a");
+                swear = swear.replaceAll("5","s");
+                swear = swear.replaceAll("7","t");
+                swear = swear.replaceAll("0","o");
+                swear = swear.replaceAll("9","g");
                 text = text.replaceAll("(?iu)" + swear, "****");
             }
 
@@ -22,6 +31,15 @@ public class CurseFilter extends Plugin{
 
         Events.on(PlayerConnect.class, event -> {
             for(String swear : swears){
+                swear = swear.replaceAll("1","i");
+                swear = swear.replaceAll("!","i");
+                swear = swear.replaceAll("3","e");
+                swear = swear.replaceAll("4","a");
+                swear = swear.replaceAll("@","a");
+                swear = swear.replaceAll("5","s");
+                swear = swear.replaceAll("7","t");
+                swear = swear.replaceAll("0","o");
+                swear = swear.replaceAll("9","g");
                 if(event.player.name.toLowerCase().contains(swear)){
                     event.player.con.kick("That's not a very nice name.");
                     break;
